@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const request = require('request');
+const request = require('./request');
 
 const exec = async () => {
   try {
