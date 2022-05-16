@@ -1,0 +1,28 @@
+name: 'Import map updater '
+description: 'This action calls your own import map deployer server to update import-map.json in a given environment.'
+inputs:
+  imd-server:
+    description: 'The url of the import map deployer server.'
+    required: true
+  imd-username:
+    description: 'The basic auth user name of import map deployer server.'
+    required: true
+  imd-password:
+    description: 'The basic auth password of import map deployer server.'
+    required: true
+  imd-env:
+    description: 'The environment to update the import-map.json file.'
+    required: true
+  service:
+    description: 'The name of the application to update. ex:@your-company/your-app.'
+    required: true
+  url:
+    description: 'The url of your app to be updated to.'
+    required: true
+
+outputs:
+  status: # id of output
+    description: 'http call status code.'
+runs:
+  using: 'node16'
+  main: 'index.js'
