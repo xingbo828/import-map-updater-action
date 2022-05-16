@@ -16,7 +16,8 @@ const exec = async () => {
       service: core.getInput('service'),
       url: core.getInput('url'),
     });
-    console.log(`response:, ${JSON.stringify(response)}`);
+    console.log(`patchURL ${patchUrl}`)
+    console.log(`Response:, ${JSON.stringify(response)}`);
     core.setOutput('status', response.status);
   } catch (error) {
     core.setFailed(error.message);
