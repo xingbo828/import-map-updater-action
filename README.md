@@ -33,7 +33,7 @@ The url of your app to be updated to.
 
 ## Example usage
 ```
-uses: xingbo828/import-map-updater@v1
+uses: xingbo828/import-map-updater-action@v1
 with:
   imd-server: 'http://my-imd-server'
   imd-username: 'foo'
