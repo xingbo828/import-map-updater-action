@@ -11,7 +11,7 @@ jobs:
         id: import_map_deploy
         uses: xingbo828/import-map-updater-action@v1.2
         with:
-          imd-server: 'http://my-imd-server'
+          imd-server: 'https://www.google.ca'
           imd-username: 'foo'
           imd-password: 'bar'
           imd-env: 'test'
