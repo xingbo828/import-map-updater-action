@@ -1,0 +1,21 @@
+on:
+  push:
+    branches: [ 'test-action' ]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: test action
+    steps:
+      - name: Update import map
+        id: import_map_deploy
+        uses: xingbo828/import-map-updater@v1
+        with:
+          imd-server: 'http://my-imd-server'
+          imd-username: 'foo'
+          imd-password: 'bar'
+          imd-env: 'test'
+          service: '@my-company/my-project'
+          url: 'https://cdn.xxx.xx/test/my-project.js'
+      - name: Get the status code
+        run: echo "The status code was ${{ steps.import_map_deploy.outputs.status }}"
