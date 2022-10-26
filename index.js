@@ -16,7 +16,6 @@ const exec = async () => {
       }
     );
     console.log(`Response:, ${JSON.stringify(response.data)}`);
-    core.setOutput('status', response.status);
   } catch (error) {
     core.setFailed(error.message);
   }
